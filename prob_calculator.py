@@ -39,3 +39,10 @@ def experiment(hat, expected_balls, num_balls_drawn, num_experiments):
             success = success + 1
 
     return success / num_experiments
+
+print('')
+hat =  Hat(blue = 7, green = 3, red = 4, gray = 5, black = 2)
+print('Balls in the hat:', hat.contents)
+print('')
+print('Probability to draw 1 black ball and 3 blue balls from a 4 ball draw:', str(experiment(hat, {"black": 1, "blue": 3}, 5, 1000)*100) + '%')
+print('')
